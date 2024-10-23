@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nim Math Game</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background: linear-gradient(135deg, #fbb03b, #ff6347);
+        }
+
+        .container {
+            text-align: center;
+            background-color: #ffffff;
+            padding: 40px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            border-radius: 15px;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #ff6347;
+            font-size: 30px;
+            letter-spacing: 1px;
+        }
+
+        .matches {
+            font-size: 100px;
+            line-height: 1.2;
+            margin-bottom: 30px;
+            color: #333333;
+        }
+
+        .row {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #ff8c00;
+            color: #fff;
+            border: none;
+            padding: 14px 28px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ff6a00;
+        }
+
+        button:active {
+            transform: scale(0.96);
+        }
+
+        .message {
+            margin-top: 30px;
+            font-size: 22px;
+            color: #333333;
+        }
+
+        .match {
+            cursor: pointer;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .match:hover {
+            transform: translateY(-12px);
+            color: #ff6347;
+        }
+
+        .match:active {
+            transform: translateY(-6px);
+            color: #ff4500;
+        }
+
+        #probability {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #333333;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Nim Mah Game</h1>
+        <div class="matches">
+            <div class="row" id="row1"></div>
+            <div class="row" id="row2"></div>
+            <div class="row" id="row3"></div>
+            <div class="row" id="row4"></div>
+        </div>
+        <button onclick="finishTurn()">Finish Turn</button>
+        <div id="probability"></div>
+        <div class="message" id="message"></div>
+    </div>
+
+    <script src="Rolandsants.js"></script>
+</body>
+</html>
